@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Тест «Лидерский потенциал» · НИИ: Практик</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#070b14;
+  --bg2:#0c1220;
+  --panel:#101a2c;
+  --panel2:#0e1626;
+  --gold:#d9a441;
+  --gold-soft:#e8be6e;
+  --gold-deep:#b8893b;
+  --line:#23314a;
+  --line-soft:#1a2538;
+  --text:#e8edf5;
+  --muted:#93a1b8;
+  --white:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(1200px 700px at 80% -10%,#13203a 0%,var(--bg) 55%) ,var(--bg);
+  color:var(--text);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  line-height:1.55;
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;
+  min-height:100vh;
+  padding:0 0 80px;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+
+/* HEADER */
+.top{
+  padding:38px 0 26px;
+  border-bottom:1px solid var(--line-soft);
+  margin-bottom:34px;
+}
+.brand{display:flex;align-items:center;gap:13px;margin-bottom:30px}
+.logo{
+  height:54px;width:auto;flex:none;display:block;
+}
+.brand .bt{font-size:12px;letter-spacing:.16em;line-height:1.4}
+.brand .bt .l1{color:var(--muted)}
+.brand .bt .l2{color:var(--gold);font-weight:800;font-size:17px;letter-spacing:.1em}
+.kicker{
+  font-size:12px;letter-spacing:.32em;color:var(--gold-deep);
+  text-transform:uppercase;margin-bottom:14px;font-weight:700;
+}
+h1{
+  font-size:40px;line-height:1.04;font-weight:800;letter-spacing:-.01em;
+  color:var(--white);margin-bottom:6px;text-transform:uppercase;
+}
+h1 .g{color:var(--gold)}
+.test-name{
+  font-size:21px;font-weight:700;color:var(--gold-soft);
+  letter-spacing:.04em;margin-top:14px;
+}
+.lede{color:var(--muted);font-size:15px;margin-top:18px;max-width:600px}
+
+/* INTRO CARD */
+.intro{
+  background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+  border:1px solid var(--line);border-radius:14px;
+  padding:26px 26px 24px;margin-bottom:14px;
+}
+.intro h3{color:var(--gold-soft);font-size:15px;margin-bottom:12px;letter-spacing:.02em}
+.intro ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.intro li{padding-left:20px;position:relative;color:var(--text);font-size:14.5px}
+.intro li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.intro-after{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--muted);line-height:1.55}
+.intro-after b{color:var(--gold-soft)}
+.note{
+  border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+  margin-bottom:14px;background:rgba(217,164,65,.04);
+}
+.note b{color:var(--gold-soft)}
+.note p{color:var(--muted);font-size:14px}
+
+/* SCALE LEGEND */
+.legend{
+  background:var(--panel2);border:1px solid var(--line);border-radius:12px;
+  padding:20px 22px;margin-bottom:30px;
+}
+.legend .lh{font-size:13px;letter-spacing:.04em;color:var(--text);margin-bottom:14px}
+.legend .lh b{color:var(--gold)}
+.legrow{display:flex;flex-wrap:wrap;gap:8px}
+.legchip{
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--muted);
+  border:1px solid var(--line);border-radius:8px;padding:6px 11px 6px 8px;
+}
+.legchip span{
+  width:22px;height:22px;border-radius:6px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;color:var(--gold);background:rgba(217,164,65,.1);
+  border:1px solid var(--gold-deep);font-size:12px;
+}
+.legtip{font-size:13px;color:var(--gold-soft);margin-top:13px}
+
+/* SECTION */
+.section{margin-bottom:30px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.sec-tag{font-size:11px;letter-spacing:.26em;color:var(--gold-deep);font-weight:700;text-transform:uppercase}
+.sec-head h2{
+  font-size:23px;font-weight:800;color:var(--white);
+  text-transform:uppercase;letter-spacing:.01em;line-height:1.1;
+}
+.sec-head h2 .g{color:var(--gold)}
+.sec-sub{color:var(--muted);font-size:13.5px;margin-bottom:20px}
+
+/* QUESTION */
+.q{
+  border-bottom:1px solid var(--line-soft);
+  padding:18px 0;
+}
+.q:last-child{border-bottom:none}
+.q-top{display:flex;gap:14px;margin-bottom:13px}
+.q-num{
+  flex:none;width:30px;height:30px;border-radius:8px;
+  border:1px solid var(--gold-deep);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:14px;background:rgba(217,164,65,.06);
+}
+.q-text{font-size:14.5px;color:var(--text);line-height:1.5;padding-top:4px}
+.scale{display:flex;gap:8px;padding-left:44px;flex-wrap:wrap}
+.opt{
+  width:42px;height:42px;border-radius:9px;flex:none;
+  border:1px solid var(--line);background:var(--panel2);
+  color:var(--muted);font-weight:700;font-size:15px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .14s ease;font-family:inherit;
+}
+.opt:hover{border-color:var(--gold-deep);color:var(--gold-soft)}
+.opt.sel{
+  background:var(--gold);border-color:var(--gold);color:#1a1205;
+  box-shadow:0 0 0 3px rgba(217,164,65,.18);
+}
+.opt:focus-visible{outline:2px solid var(--gold-soft);outline-offset:2px}
+
+/* SECTION PROGRESS */
+.sec-prog{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.03em}
+.sec-prog.done{color:var(--gold-soft)}
+
+/* SUBMIT */
+.submit-row{margin:26px 0 0;text-align:center}
+.btn{
+  font-family:inherit;font-weight:700;font-size:15px;letter-spacing:.04em;
+  border-radius:11px;padding:15px 34px;cursor:pointer;border:none;
+  transition:all .16s ease;
+}
+.btn-gold{
+  background:linear-gradient(180deg,var(--gold-soft),var(--gold-deep));
+  color:#1a1205;
+}
+.btn-gold:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-gold:disabled{opacity:.4;cursor:not-allowed;transform:none;filter:none}
+.btn-ghost{
+  background:transparent;border:1px solid var(--line);color:var(--text);
+}
+.btn-ghost:hover{border-color:var(--gold-deep);color:var(--gold-soft)}
+.hint-left{font-size:13px;color:var(--muted);margin-top:13px}
+
+/* RESULT */
+.result{display:none;margin-top:10px}
+.result.show{display:block;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.res-head{text-align:center;margin-bottom:30px}
+.res-head .kicker{margin-bottom:10px}
+.res-head h2{font-size:30px;color:var(--white);text-transform:uppercase;font-weight:800;letter-spacing:-.01em}
+
+/* values grid */
+.vals{display:flex;flex-direction:column;gap:11px;margin-bottom:26px}
+.val{
+  display:flex;align-items:flex-start;gap:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 20px;
+}
+.val .vnum{
+  flex:none;width:54px;height:54px;border-radius:11px;
+  background:rgba(217,164,65,.08);border:1px solid var(--gold-deep);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:24px;font-weight:800;
+}
+.val .vbody{flex:1;min-width:0}
+.val .vtop{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.val .vname{font-size:14px;color:var(--text);font-weight:700;letter-spacing:.02em}
+.val .vlevel{font-size:13px;margin-top:5px}
+.val-course{
+  background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--gold-deep);
+  border-radius:0 10px 10px 0;padding:13px 17px;margin:-4px 0 4px;
+}
+.val-course .vc-h{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:6px}
+.val-course p{font-size:13.5px;color:var(--muted);line-height:1.55;margin:0}
+.val-course p b{color:var(--gold-soft)}
+.val .vscore{
+  flex:none;font-size:26px;font-weight:800;color:var(--gold-soft);
+  font-variant-numeric:tabular-nums;
+}
+.val .vscore small{font-size:13px;color:var(--muted);font-weight:600}
+
+/* formula */
+.formula{
+  border:1.5px solid var(--gold-deep);border-radius:14px;
+  background:linear-gradient(180deg,rgba(217,164,65,.07),rgba(217,164,65,.02));
+  padding:26px 24px;text-align:center;margin-bottom:26px;
+}
+.formula .fl{font-size:12px;letter-spacing:.26em;color:var(--gold-deep);text-transform:uppercase;font-weight:700;margin-bottom:16px}
+.formula .feq{
+  font-size:17px;color:var(--text);line-height:1.7;
+  font-variant-numeric:tabular-nums;
+}
+.formula .feq b{color:var(--gold-soft)}
+.formula .ftotal{
+  margin-top:18px;padding-top:18px;border-top:1px solid var(--line);
+}
+.formula .ftotal .fn{font-size:46px;font-weight:800;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.formula .ftotal .fc{font-size:13px;color:var(--muted);margin-top:8px;letter-spacing:.04em}
+
+/* level colors */
+.lv-high{color:#7fd6a0}
+.lv-mid{color:var(--gold-soft)}
+.lv-low{color:#e0a872}
+.lv-min{color:#d98a8a}
+
+/* sell block */
+.sell{
+  background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+  border:1px solid var(--line);border-radius:14px;
+  padding:28px 26px;margin-bottom:18px;
+}
+.sell .sh{font-size:18px;color:var(--gold-soft);font-weight:700;margin-bottom:14px;letter-spacing:.01em}
+.sell p{color:var(--text);font-size:14.5px;margin-bottom:13px}
+.sell p:last-child{margin-bottom:0}
+.sell .weak{color:var(--gold);font-weight:700}
+.sell .muted{color:var(--muted)}
+
+.share-row{text-align:center;margin:4px 0 22px}
+.share-note{font-size:13px;color:var(--muted);margin-top:13px;line-height:1.5;max-width:520px;margin-left:auto;margin-right:auto}
+.toast{
+  position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+  background:var(--gold);color:#1a1205;font-family:inherit;font-weight:700;font-size:14px;
+  padding:13px 22px;border-radius:10px;opacity:0;pointer-events:none;
+  transition:all .25s ease;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.4);max-width:90%;text-align:center;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.again{text-align:center;margin-top:4px}
+.again button{
+  background:none;border:none;color:var(--muted);font-family:inherit;
+  font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+}
+.again button:hover{color:var(--gold-soft)}
+
+.foot{
+  text-align:center;font-size:11px;letter-spacing:.16em;color:#4d5b73;
+  text-transform:uppercase;margin-top:40px;padding-top:24px;
+  border-top:1px solid var(--line-soft);
+}
+
+.err{
+  display:none;color:#d98a8a;font-size:13.5px;text-align:center;
+  margin-top:12px;
+}
+.err.show{display:block}
+
+@media(max-width:560px){
+  h1{font-size:30px}
+  .res-head h2{font-size:24px}
+  .scale{padding-left:0;margin-top:4px}
+  .opt{width:40px;height:40px}
+  .val{gap:13px;padding:15px 16px}
+  .val .vnum{width:44px;height:44px;font-size:20px}
+  .val .vscore{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="top">
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,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" alt="НИИ: Практик">
+      <div class="bt">
+        <div class="l2">НИИ: Практик</div>
+      </div>
+    </div>
+    <h1>Тест<br><span class="g">«Лидерский потенциал»</span></h1>
+    <p class="lede">За эти дни вы уже почувствовали, что точные решения рождаются не из головы, а из состояния. Этот тест поможет вам увидеть, в каком состоянии вы подходите к своим целям прямо сейчас – и что именно стоит укрепить.</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <h3>Что вы поймёте о себе</h3>
+    <ul>
+      <li>на каком уровне сейчас четыре фактора, из которых складываются ваши решения;</li>
+      <li>как каждый из них влияет на движение к вашим целям и намерениям;</li>
+      <li>какие факторы у вас уже хорошо развиты, а что стоит укрепить в первую очередь.</li>
+    </ul>
+    <p class="intro-after">Результат и рекомендации вы получите сразу здесь, как только пройдёте тест. Это займёт <b>10–15 минут</b> – отвечайте спокойно и честно.</p>
+  </div>
+  <div class="note">
+    <p><b>Это не медицинская диагностика.</b> Это инструмент для самоанализа, понимания своих сильных сторон и зон развития.</p>
+  </div>
+
+  <!-- SCALE -->
+  <div class="legend">
+    <div class="lh">Оцените каждое утверждение по шкале от <b>1 до 5</b>:</div>
+    <div class="legrow">
+      <div class="legchip"><span>1</span>почти никогда</div>
+      <div class="legchip"><span>2</span>редко</div>
+      <div class="legchip"><span>3</span>иногда</div>
+      <div class="legchip"><span>4</span>часто</div>
+      <div class="legchip"><span>5</span>почти всегда</div>
+    </div>
+    <div class="legtip">Отвечайте быстро и честно – не «как правильно», а как есть сейчас.</div>
+  </div>
+
+  <!-- FORM -->
+  <div id="form"></div>
+
+  <div class="submit-row">
+    <button id="btnResult" class="btn btn-gold" disabled>Показать результат</button>
+    <div class="err" id="err">Ответьте, пожалуйста, на все утверждения – остались пропущенные.</div>
+    <div class="hint-left" id="leftHint"></div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="result" id="result">
+    <div class="res-head">
+      <div class="kicker">Ваш результат</div>
+      <h2>Ваши 4 значения</h2>
+    </div>
+    <div class="vals" id="vals"></div>
+    <div class="sell" id="sellBox"></div>
+    <div class="share-row">
+      <button id="btnShare" class="btn btn-gold">Скопировать результат для чата</button>
+      <p class="share-note">Скопируйте свой результат и поделитесь им в чате интенсива – так группа соберёт общую картину, у кого какой фактор в фокусе.</p>
+    </div>
+    <div class="again"><button id="btnAgain">Пройти тест заново</button></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="foot">НейроИнтуитивный интеллект: Практик · Предобучение</div>
+</div>
+
+<script>
+(function(){
+  // ============================================================
+  //  СБОР ОБЕЗЛИЧЕННОЙ СТАТИСТИКИ (без имён и персональных данных)
+  //  Вставьте сюда ссылку вашего Google Apps Script (Web App).
+  //  Если оставить пустым '' — отправка просто отключится, тест работает как обычно.
+  var STATS_ENDPOINT = '';
+  // ============================================================
+
+  // ---- DATA (из PDF, дословно) ----
+  var SECTIONS=[
+    {key:'pu',tag:'Тест 1',name:'Психическая',name2:'устойчивость',
+     q:[
+      'В ситуации неожиданного изменения планов или форс-мажора я быстро перестраиваюсь и начинаю действовать по новой схеме.',
+      'После неудачи или получения негативной обратной связи я могу быстро отбросить эмоции и сосредоточиться на решении проблемы или извлечении урока.',
+      'В условиях стресса или высокой нагрузки я сохраняю ясность мышления и способность принимать решения.',
+      'При столкновении с конфликтом в команде я быстро понимаю его суть и могу предложить вариант выхода из ситуации.',
+      'Если я оказываюсь в незнакомой профессиональной среде, я быстро ориентируюсь и определяю, как эффективно действовать.',
+      'Когда меня критикуют, я легко отделяю эмоциональную составляющую от рациональной и нахожу в критике полезное зерно.',
+      'В условиях дефицита времени я принимаю решения быстрее, чем обычно, без значительной потери в их качестве.',
+      'Столкнувшись с препятствием, я быстро генерирую несколько возможных путей его преодоления.',
+      'В споре или дискуссии я быстро улавливаю ключевые аргументы сторон и могу сформулировать сбалансированную позицию.',
+      'После периода интенсивной работы или стресса я быстро (в течение нескольких часов/одного дня) восстанавливаю свою работоспособность.'
+     ]},
+    {key:'fa',tag:'Тест 2',name:'Физическая',name2:'адаптивность и реакция',
+     q:[
+      'При резкой смене режима дня (например, ночной перелёт, дежурство) моё тело и общее состояние адаптируются к новым условиям в течение первых суток.',
+      'После интенсивной физической или умственной нагрузки я быстро (в течение нескольких часов) восстанавливаю чувство бодрости.',
+      'Мой сон эффективен: даже если я поспал меньше обычного, я сохраняю концентрацию и работоспособность в течение дня.',
+      'При необходимости я могу продуктивно работать, пропустив один приём пищи или изменив привычный рацион без сильного дискомфорта (головной боли, упадка сил).',
+      'Если я начинаю регулярно заниматься новой физической активностью (например, плаванием или бегом), моё тело быстро откликается, и я чувствую прогресс в выносливости или силе уже через 2–3 недели.',
+      'В условиях умеренного стресса (жёсткий дедлайн, важные переговоры) у меня сохраняется стабильный уровень энергии, не возникает резких физических спадов или болезненных ощущений (напряжение в шее, желудке).',
+      'После перенесённой болезни (например, ОРВИ) я возвращаюсь к привычному уровню работоспособности и активности достаточно быстро (в пределах 1–2 дней после выздоровления).',
+      'При работе в нестандартных условиях (длительные переезды, работа в шумном/open space помещении) я могу поддерживать фокус и не испытываю сильного физического истощения.',
+      'Мой организм хорошо справляется с умеренными перегрузками (например, трудоголизм в течение недели на проекте), после чего мне не требуется длительный (больше выходных) период для «отходняка».',
+      'Я замечаю, что моё физическое состояние (бодрость, тонус, сопротивляемость простудам) в целом стабильно и мало зависит от сезонных изменений или перемены погоды.'
+     ]},
+    {key:'zl',tag:'Тест 3',name:'Зеркальное лидерство',name2:'социально-эмоциональная рефлексия',
+     q:[
+      'При встрече с новым человеком или группой я почти мгновенно улавливаю общий эмоциональный фон и невербальные сигналы (напряжение, открытость, скепсис).',
+      'В процессе общения я непроизвольно «отражаю» позу, темп речи и интонации собеседника, что помогает быстрее установить контакт.',
+      'Я могу точно назвать, какие эмоции испытывает каждый из ключевых членов моей команды в текущий момент, даже если они ничего не говорят вслух.',
+      'Когда в команде возникает скрытый конфликт или напряжение, я чувствую это одним из первых, ещё до того, как ситуация станет явной.',
+      'В ходе дискуссии я быстро замечаю, как мои слова или решения влияют на эмоциональное состояние участников, и корректирую посыл, если вижу негативную реакцию.',
+      'Я легко адаптирую свой стиль общения и аргументации под конкретного собеседника, чтобы быть правильно понятым и услышанным.',
+      'При принятии сложного решения я могу мысленно «проиграть» реакцию на него каждого из заинтересованных лиц (коллег, клиентов, партнёров) с высокой точностью.',
+      'В стрессовой ситуации я способен сознательно своим спокойствием и уверенностью «заразить» этим состоянием других, выступая эмоциональным якорем для команды.',
+      'Мне достаточно короткого наблюдения за групповым обсуждением, чтобы понять неформальные роли и скрытых лидеров в коллективе.',
+      'Я верю, что моя основная задача как лидера – не просто ставить задачи, а создавать и поддерживать тот эмоциональный климат, в котором команда работает максимально эффективно и раскрывает свой потенциал.'
+     ]}
+  ];
+
+  // уровни по 50-балльной шкале (из PDF) — тексты под каждый фактор
+  var LEVELS={
+    pu:[
+      {min:40,cls:'lv-high',t:'Высокий уровень. Вы стабильны, адаптивны и эффективно действуете под давлением.'},
+      {min:30,cls:'lv-mid',t:'Средний уровень. Хороший базовый ресурс устойчивости, но в пиковых ситуациях возможны колебания. Есть куда развиваться.'},
+      {min:20,cls:'lv-low',t:'Ниже среднего. Вы можете быть уязвимы к стрессу и неопределённости. Стоит поработать над стрессоустойчивостью и когнитивной гибкостью.'},
+      {min:0, cls:'lv-min',t:'Низкий уровень. Стоит обратить внимание на развитие навыков саморегуляции и устойчивости.'}
+    ],
+    fa:[
+      {min:40,cls:'lv-high',t:'Высокий уровень. Ваше тело – надёжный и гибкий ресурс, который эффективно поддерживает вас в меняющихся условиях.'},
+      {min:30,cls:'lv-mid',t:'Средний уровень. Базовая выносливость есть, но экстремальные или длительные нагрузки могут выбивать из колеи. Есть зона для развития.'},
+      {min:20,cls:'lv-low',t:'Ниже среднего. Организм может болезненно реагировать на изменения режима, стресс и нагрузки. Стоит обратить внимание на базовые привычки: сон, питание, активность.'},
+      {min:0, cls:'lv-min',t:'Низкий уровень. Высокий риск выгорания. Первоочередное внимание – физическому состоянию.'}
+    ],
+    zl:[
+      {min:40,cls:'lv-high',t:'Высокий уровень. Вы – социальный сенсор, тонко чувствующий групповую динамику и эмоциональное поле.'},
+      {min:30,cls:'lv-mid',t:'Средний уровень. Хорошая ситуативная эмпатия, но можете упускать тонкие или скрытые сигналы.'},
+      {min:20,cls:'lv-low',t:'Ниже среднего. Вы больше сосредоточены на содержательной, а не процессуальной стороне общения.'},
+      {min:0, cls:'lv-min',t:'Низкий уровень. Стиль руководства, скорее всего, директивный и мало учитывающий человеческий фактор.'}
+    ]
+  };
+
+  var NAMES={pu:'Психическая устойчивость',fa:'Физическая адаптивность',zl:'Зеркальное лидерство'};
+
+  // ---- STATE ----
+  var answers={pu:[],fa:[],zl:[]};
+  SECTIONS.forEach(function(s){answers[s.key]=new Array(10).fill(0);});
+
+  // ---- RENDER FORM ----
+  var form=document.getElementById('form');
+  SECTIONS.forEach(function(sec,si){
+    var section=document.createElement('div');
+    section.className='section';
+    var head='<div class="sec-head"><span class="sec-tag">'+sec.tag+'</span>'+
+      '<h2>'+sec.name+(sec.name2?' <span class="g">'+sec.name2+'</span>':'')+'</h2></div>';
+    section.innerHTML=head;
+    sec.q.forEach(function(qt,qi){
+      var q=document.createElement('div');q.className='q';
+      var opts='';
+      for(var v=1;v<=5;v++){
+        opts+='<button class="opt" data-sec="'+sec.key+'" data-qi="'+qi+'" data-v="'+v+'" aria-label="'+v+'">'+v+'</button>';
+      }
+      q.innerHTML='<div class="q-top"><div class="q-num">'+(qi+1)+'</div>'+
+        '<div class="q-text">'+qt+'</div></div>'+
+        '<div class="scale">'+opts+'</div>';
+      section.appendChild(q);
+    });
+    var prog=document.createElement('div');prog.className='sec-prog';prog.id='prog-'+sec.key;
+    prog.textContent='Отвечено 0 из 10';
+    section.appendChild(prog);
+    form.appendChild(section);
+  });
+
+  // ---- INTERACTION ----
+  var btn=document.getElementById('btnResult');
+  var leftHint=document.getElementById('leftHint');
+  var errBox=document.getElementById('err');
+
+  form.addEventListener('click',function(e){
+    var b=e.target.closest('.opt');if(!b)return;
+    var sec=b.dataset.sec, qi=+b.dataset.qi, v=+b.dataset.v;
+    answers[sec][qi]=v;
+    // visual
+    var sibs=b.parentNode.querySelectorAll('.opt');
+    sibs.forEach(function(x){x.classList.remove('sel');});
+    b.classList.add('sel');
+    updateProgress();
+  });
+
+  function answeredCount(sec){return answers[sec].filter(function(x){return x>0;}).length;}
+  function totalAnswered(){return answeredCount('pu')+answeredCount('fa')+answeredCount('zl');}
+
+  function updateProgress(){
+    SECTIONS.forEach(function(s){
+      var c=answeredCount(s.key);
+      var p=document.getElementById('prog-'+s.key);
+      p.textContent='Отвечено '+c+' из 10';
+      p.classList.toggle('done',c===10);
+    });
+    var total=totalAnswered();
+    var left=30-total;
+    btn.disabled=total<30;
+    if(left>0){leftHint.textContent='Осталось ответить: '+left;}
+    else{leftHint.textContent='Все ответы готовы – можно смотреть результат.';}
+    errBox.classList.remove('show');
+  }
+
+  // ---- СВЯЗКА С КУРСОМ по каждому фактору × уровню ----
+  // band: 'high' (40-50), 'mid' (30-39), 'low' (<30 — ниже среднего и низкий)
+  // тексты в терминологии реальной программы курса
+  var COURSE={
+    pu:{
+      mod:'Модуль 1 «Природа и виды интеллекта. Когнитивные ловушки» + Модуль 4 «Психическая устойчивость»',
+      high:'Что это даёт: вы не «улетаете» с маршрута и удерживаете внутренний вектор к цели – сохраняете ясность, энергию и способность действовать на всём пути, а не только в момент решения. Делаете то, что надо для задачи, а не то, что хочется прямо сейчас. На курсе в Модуле 1 «Природа и виды интеллекта. Когнитивные ловушки» и Модуле 4 «Психическая устойчивость» (Лекция 4 «Динамичная психология и искусство невозможного») мы разбираем, как это устроено, чтобы вы управляли этим осознанно.',
+      mid:'Зачем это знать: ресурс есть, но в пиковые моменты устойчивость может «слетать» – и тогда вы уходите в дофаминовые ловушки (засмотреться, отвлечься, отложить) и теряете вектор к цели. Ровно над этим работаем на курсе: Модуль 1 «Когнитивные ловушки» (учимся ловить искажения в решениях) и Модуль 4 «Психическая устойчивость» с практикой «Лаборатория активного ума: управление траекторией».',
+      low:'Что это значит на практике: когда устойчивость низкая, проще всего «слететь» с цели – мозг уходит в вычёсывание и дофаминовые ловушки, дела не доводятся до конца, вектор теряется. Это ваша главная точка роста. На курсе для неё есть целое направление: Модуль 1 «Когнитивные ловушки» и Модуль 4 «Психическая устойчивость» – через практику и нейро-стабилизаторы учимся сохранять ясность под нагрузкой и быстро восстанавливаться.'
+    },
+    fa:{
+      mod:'Модуль 3 «Биологическая основа и формула НИИ»',
+      high:'Что это даёт: тело надёжно реализует ваше намерение – когда приходит новая возможность, у вас хватает энергии и ресурса, чтобы взяться, а не отказаться «потому что устал». Это фундамент, на котором держатся все решения. На курсе в Модуле 3 «Биологическая основа и формула НИИ» (Лекция 3 «Биологическая адаптивность и формула НИИ») мы разбираем механику этого, чтобы вы поддерживали уровень осознанно.',
+      mid:'Зачем это знать: первой на любое новое решение срабатывает именно физическая адаптивность – мозг считывает «выдержу ли, есть ли ресурс». Если её не хватает, вы отказываетесь от целей не по сути, а просто от усталости. На курсе Модуль 3 «Биологическая адаптивность» и практика «Интеграция биологических алгоритмов» – работаем с привычками, энергией и восстановлением, чтобы адаптивность стала стабильной.',
+      low:'Что это значит на практике: при низкой адаптивности двигаться к цели физически тяжелее – не хватает энергии на новое, и вы чаще отказываетесь от возможностей просто потому, что устали. С этого стоит начать – тело это фундамент всех решений. На курсе Модуль 3 «Биологическая основа и формула НИИ»: работаем с базовыми привычками (сон, режим, восстановление) и учимся замечать интуитивный отклик в теле, снижая риск выгорания.'
+    },
+    zl:{
+      mod:'Модуль 5 «Зеркальное лидерство»',
+      high:'Что это даёт: вы эмпатичны и тонко считываете людей, но умеете возвращаться к себе – не носите на себе чужие эмоции и не заражаетесь чужим негативом. Это и есть зеркальное лидерство: вести, а не реагировать. На курсе в Модуле 5 «Зеркальное лидерство» (Лекция 5 «Биология зеркального лидерства и ловушки подсознания») доводим этот механизм до осознанного инструмента – через практику «Аутентичность выбора».',
+      mid:'Зачем это знать: высокая чувствительность к людям – это «дар и проклятие». Без навыка она уводит в чужие мнения: вы реагируете на критику, теряете фокус, начинаете жить по чужому сценарию. На курсе в Модуле 5 «Зеркальное лидерство» учимся оставаться в контакте с миром, но не терять себя и свой вектор.',
+      low:'Что это значит на практике: когда зеркального лидерства не хватает, вы носите на себе чужие эмоции и оценки – болезненно реагируете на критику, уходите в чужие сценарии и в итоге чувствуете внутреннее неудовлетворение. Здесь большой потенциал роста. На курсе Модуль 5 «Зеркальное лидерство» (Лекция 5 «Биология зеркального лидерства») – учимся настраиваться на людей и оставаться в аутентичном выборе, а не реагировать на всех подряд.'
+    }
+  };
+  function bandOf(score){ if(score>=40)return 'high'; if(score>=30)return 'mid'; return 'low'; }
+
+  // ---- SCORING ----
+  function sum(arr){return arr.reduce(function(a,b){return a+b;},0);}
+
+  function levelFor(sec,score){
+    var arr=LEVELS[sec];
+    for(var i=0;i<arr.length;i++){if(score>=arr[i].min)return arr[i];}
+    return arr[arr.length-1];
+  }
+
+  // СНУ по большинству ответов среди всех 30 (вариант 1)
+  function snuCoef(){
+    var all=answers.pu.concat(answers.fa,answers.zl);
+    var c={1:0,2:0,3:0,4:0,5:0};
+    all.forEach(function(v){c[v]++;});
+    var fives=c[5], fours=c[4], threes=c[3], lowmid=c[2]+c[3];
+    var high=fours+fives;
+    // правило (из PDF): больше ответов «4 и 5» -> 1.2; часто «2 и 3» -> 0.8; в основном «3 и 4» -> 1.0
+    if(lowmid>high) return {k:0.8,t:'В условиях нагрузки скорость реакции и адаптации может снижаться.'};
+    if(fives>=threes && high>lowmid) return {k:1.2,t:'Ваша скорость обработки информации и принятия решений в сложных условиях высока.'};
+    return {k:1.0,t:'Устойчивость и адаптация проявляются стабильно.'};
+  }
+
+  function weakestFactor(scores){
+    // самый низкий из трёх 50-балльных
+    var entries=[['pu',scores.pu],['fa',scores.fa],['zl',scores.zl]];
+    entries.sort(function(a,b){return a[1]-b[1];});
+    return entries[0][0];
+  }
+
+  // ---- ОТПРАВКА ОБЕЗЛИЧЕННОЙ СТАТИСТИКИ ----
+  // Без имени и любых ПД: только баллы, СНУ, слабый фактор, дата и 30 ответов.
+  function sendStats(pu,fa,zl,snu){
+    if(!STATS_ENDPOINT) return; // не настроено — тихо пропускаем
+    var weak=weakestFactor({pu:pu,fa:fa,zl:zl});
+    var payload={
+      ts:new Date().toISOString(),
+      pu:pu, fa:fa, zl:zl,
+      snu:snu.k,
+      weak:weak,
+      weak_name:NAMES[weak],
+      pu_level:bandOf(pu), fa_level:bandOf(fa), zl_level:bandOf(zl),
+      answers_pu:answers.pu.join(','),
+      answers_fa:answers.fa.join(','),
+      answers_zl:answers.zl.join(',')
+    };
+    try{
+      // form-encoded + no-cors: надёжно проходит в Google Apps Script без preflight
+      var body=Object.keys(payload).map(function(k){
+        return encodeURIComponent(k)+'='+encodeURIComponent(payload[k]);
+      }).join('&');
+      fetch(STATS_ENDPOINT,{
+        method:'POST',
+        mode:'no-cors',
+        headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+        body:body
+      }).catch(function(){});
+    }catch(e){/* отправка не критична для работы теста */}
+  }
+
+  // ---- RESULT RENDER ----
+  var lastResult=null;
+  btn.addEventListener('click',function(){
+    if(totalAnswered()<30){errBox.classList.add('show');return;}
+
+    var pu=sum(answers.pu), fa=sum(answers.fa), zl=sum(answers.zl);
+    var snu=snuCoef();
+    lastResult={pu:pu,fa:fa,zl:zl,snu:snu};
+    sendStats(pu,fa,zl,snu);
+
+    // values
+    var vals=document.getElementById('vals');
+    var items=[
+      {n:'1',key:'pu',score:pu},
+      {n:'2',key:'fa',score:fa},
+      {n:'3',key:'zl',score:zl}
+    ];
+    var vh='';
+    items.forEach(function(it){
+      var lv=levelFor(it.key,it.score);
+      var band=bandOf(it.score);
+      var c=COURSE[it.key];
+      vh+='<div class="val"><div class="vnum">'+it.n+'</div>'+
+        '<div class="vbody"><div class="vtop"><div class="vname">'+NAMES[it.key]+'</div>'+
+        '<div class="vscore">'+it.score+'<small> / 50</small></div></div>'+
+        '<div class="vlevel '+lv.cls+'">'+lv.t+'</div></div></div>';
+      vh+='<div class="val-course"><div class="vc-h">Как с этим работаем на курсе</div>'+
+        '<p>'+c[band]+'</p></div>';
+    });
+    // СНУ row
+    vh+='<div class="val"><div class="vnum">4</div>'+
+      '<div class="vbody"><div class="vtop"><div class="vname">Скорость нервного узла (СНУ)</div>'+
+      '<div class="vscore">×'+snu.k.toFixed(1)+'</div></div>'+
+      '<div class="vlevel lv-mid">'+snu.t+'</div></div></div>';
+    vals.innerHTML=vh;
+
+    // финальная подводка — короткая, мягкая
+    var weak=weakestFactor({pu:pu,fa:fa,zl:zl});
+    var weakName=NAMES[weak];
+    document.getElementById('sellBox').innerHTML=
+      '<div class="sh">Главное про эти цифры</div>'+
+      '<p>Эти четыре значения – не приговор и не врождённая данность. Это «мышцы», которые тренируются: каждый фактор можно подтянуть через наблюдение, практику и опыт. Сильнее всего сейчас стоит обратить внимание на фактор <span class="weak">«'+weakName+'»</span> – он проявился слабее остальных и тормозит общий результат.</p>'+
+      '<p class="muted">На основном курсе «НейроИнтуитивный интеллект: Практик» каждый из этих факторов разбирается в отдельном модуле – не только в теории, но и на практике. Там четыре значения, которые вы сейчас получили, перестают быть случайностью и собираются в управляемый навык.</p>';
+
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+
+  document.getElementById('btnAgain').addEventListener('click',function(){
+    SECTIONS.forEach(function(s){answers[s.key]=new Array(10).fill(0);});
+    document.querySelectorAll('.opt.sel').forEach(function(x){x.classList.remove('sel');});
+    document.getElementById('result').classList.remove('show');
+    updateProgress();
+    document.querySelector('.top').scrollIntoView({behavior:'smooth'});
+  });
+
+  // ---- ПОДЕЛИТЬСЯ РЕЗУЛЬТАТОМ (фактично, без оценок-ярлыков) ----
+  function levelWord(score){
+    if(score>=40)return 'высокий';
+    if(score>=30)return 'средний';
+    if(score>=20)return 'ниже среднего';
+    return 'низкий';
+  }
+  function buildShare(){
+    if(!lastResult)return '';
+    var r=lastResult;
+    var weak=weakestFactor({pu:r.pu,fa:r.fa,zl:r.zl});
+    var lines=[
+      'Мой результат теста «Лидерский потенциал»:',
+      '',
+      'Психическая устойчивость: '+r.pu+'/50 ('+levelWord(r.pu)+')',
+      'Физическая адаптивность: '+r.fa+'/50 ('+levelWord(r.fa)+')',
+      'Зеркальное лидерство: '+r.zl+'/50 ('+levelWord(r.zl)+')',
+      'Скорость нервного узла (СНУ): ×'+r.snu.k.toFixed(1),
+      '',
+      'В фокусе развития: '+NAMES[weak]+'.'
+    ];
+    return lines.join('\n');
+  }
+  function toast(msg){
+    var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+    setTimeout(function(){t.classList.remove('show');},2400);
+  }
+  document.getElementById('btnShare').addEventListener('click',function(){
+    var text=buildShare();
+    function fallback(){
+      var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.focus();ta.select();
+      try{document.execCommand('copy');toast('Результат скопирован – вставьте его в чат');}
+      catch(e){toast('Не удалось скопировать автоматически');}
+      ta.remove();
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){toast('Результат скопирован – вставьте его в чат');},fallback);
+    }else{fallback();}
+  });
+
+  updateProgress();
+})();
+</script>
+</body>
+</html>
