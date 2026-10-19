@@ -73,6 +73,7 @@
   .row{display:grid; grid-template-columns:96px 1fr; gap:18px; padding:14px 0; border-bottom:1px solid var(--soft); align-items:start}
   .date .num{font-family:Georgia,serif; font-weight:800; font-size:30px; line-height:1; color:var(--navy)}
   .date .label{display:block; margin-top:5px}
+  .date .wd{display:block}
   .what h2{font-family:Georgia,serif; font-weight:700; font-size:18px; line-height:1.35; color:var(--navy); margin:4px 0 4px}
   .what p{margin:0}
   .row.key{background:var(--paper); border:1.5px solid var(--gold); border-radius:10px; padding:16px 18px; margin-top:6px}
@@ -120,6 +121,12 @@
     .date .num{font-size:19px}
     .date .label{margin-top:2px}
     .label{font-size:9.5px}
+    .mod .what{display:flex; align-items:baseline; gap:12px}
+    .row{grid-template-columns:150px 1fr}
+    .date{display:flex; align-items:baseline; gap:6px}
+    .date .label{margin-top:0}
+    .date .wd{display:inline}
+    .mod .row{align-items:center}
   }
 </style>
 </head>
@@ -156,8 +163,12 @@
     <div class="block">
       <div class="label">Старт</div>
       <div class="row key">
-        <div class="date"><div class="num">19</div><span class="label">октября<br>понедельник</span></div>
+        <div class="date"><div class="num">19</div><span class="label">октября <span class="wd">понедельник</span></span></div>
         <div class="what"><div class="label">Предобучение</div><h2>Открывается предобучение</h2></div>
+      </div>
+      <div class="row key">
+        <div class="date"><div class="num">31</div><span class="label">октября <span class="wd">суббота</span></span></div>
+        <div class="what"><div class="label">Перед стартом</div><h2>Встреча-знакомство</h2><p>Время уточняется</p></div>
       </div>
     </div>
 
@@ -168,11 +179,11 @@
         <span class="label">Модуль 1</span>
         <h2>Природа интеллекта и когнитивные ловушки</h2>
         <div class="row">
-          <div class="date"><div class="num">3</div><span class="label">ноября<br>вторник</span></div>
+          <div class="date"><div class="num">3</div><span class="label">ноября <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Лекция 1</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
         <div class="row">
-          <div class="date"><div class="num">10</div><span class="label">ноября<br>вторник</span></div>
+          <div class="date"><div class="num">10</div><span class="label">ноября <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Практика 1</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
       </div>
@@ -181,11 +192,11 @@
         <span class="label">Модуль 2</span>
         <h2>Постановка целей и выход за пределы привычного</h2>
         <div class="row">
-          <div class="date"><div class="num">17</div><span class="label">ноября<br>вторник</span></div>
+          <div class="date"><div class="num">17</div><span class="label">ноября <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Лекция 2</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
         <div class="row">
-          <div class="date"><div class="num">24</div><span class="label">ноября<br>вторник</span></div>
+          <div class="date"><div class="num">24</div><span class="label">ноября <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Практика 2</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
       </div>
@@ -194,11 +205,11 @@
         <span class="label">Модуль 3</span>
         <h2>Биология решений и формула НИИ</h2>
         <div class="row">
-          <div class="date"><div class="num">1</div><span class="label">декабря<br>вторник</span></div>
+          <div class="date"><div class="num">1</div><span class="label">декабря <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Лекция 3</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
         <div class="row">
-          <div class="date"><div class="num">8</div><span class="label">декабря<br>вторник</span></div>
+          <div class="date"><div class="num">8</div><span class="label">декабря <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Практика 3</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
       </div>
@@ -207,11 +218,11 @@
         <span class="label">Модуль 4</span>
         <h2>Психическая устойчивость</h2>
         <div class="row">
-          <div class="date"><div class="num">15</div><span class="label">декабря<br>вторник</span></div>
+          <div class="date"><div class="num">15</div><span class="label">декабря <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Лекция 4</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
         <div class="row">
-          <div class="date"><div class="num">22</div><span class="label">декабря<br>вторник</span></div>
+          <div class="date"><div class="num">22</div><span class="label">декабря <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Практика 4</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
       </div>
@@ -220,11 +231,11 @@
         <span class="label">Модуль 5</span>
         <h2>Зеркальное лидерство</h2>
         <div class="row">
-          <div class="date"><div class="num">29</div><span class="label">декабря<br>вторник</span></div>
+          <div class="date"><div class="num">29</div><span class="label">декабря <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Лекция 5</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
         <div class="row">
-          <div class="date"><div class="num">5</div><span class="label">января<br>вторник</span></div>
+          <div class="date"><div class="num">5</div><span class="label">января <span class="wd">вторник</span></span></div>
           <div class="what"><h2>Практика 5</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
         </div>
       </div>
