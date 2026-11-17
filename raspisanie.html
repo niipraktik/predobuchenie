@@ -128,6 +128,18 @@
     .date .wd{display:inline}
     .mod .row{align-items:center}
   }
+
+  .calbox{margin:22px 0 8px; border:1.5px solid var(--gold); border-radius:10px; padding:16px 20px}
+  .calbox p{margin:6px 0 12px}
+  .calbtns{display:flex; flex-wrap:wrap; gap:10px}
+  .calbtn{display:inline-block; background:var(--navy); color:#fff; text-decoration:none; padding:10px 16px; border-radius:7px;
+    font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase}
+  .calbtn:hover{background:var(--navy-2)}
+  .cals{display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:8px}
+  .cal{font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--gold-deep); text-decoration:none; border-bottom:1px solid var(--line)}
+  .cal:hover{color:var(--navy)}
+  @media print{ .calbox, .cals{display:none} }
 </style>
 </head>
 <body>
@@ -148,7 +160,7 @@
     <div class="label">2 поток · осень 2026</div>
     <h1>Расписание живых встреч</h1>
     <p>Живые встречи идут по <b>вторникам с&nbsp;18:00 до&nbsp;19:30 по&nbsp;Москве</b>. Ритм простой: неделя&nbsp;– лекция, следующая неделя&nbsp;– практика по&nbsp;теме этой лекции. Так каждый модуль занимает две недели.</p>
-    <p>Практика идёт в&nbsp;двух группах: <b>утренняя&nbsp;– в&nbsp;9:00 по&nbsp;Москве</b>, вечерняя&nbsp;– в&nbsp;18:00. Выбирайте удобное время.</p>
+    <p>Практика идёт в&nbsp;двух группах: <b>утренняя&nbsp;– 9:00–10:30</b>, вечерняя&nbsp;– 18:00–19:30 по&nbsp;Москве. Выбирайте удобное время.</p>
 
     <div class="format">
       <div class="fcard">
@@ -158,6 +170,16 @@
       <div class="fcard">
         <div class="label">Практика</div>
         <h2>Изабелла Найманова</h2>
+      </div>
+    </div>
+
+
+    <div class="calbox">
+      <div class="label">Добавить в&nbsp;календарь</div>
+      <p>Все встречи со&nbsp;17&nbsp;ноября одним файлом: подходит для Google, Apple, Outlook и&nbsp;Яндекс Календаря. Выберите файл со&nbsp;своей группой практик. Отдельную встречу можно добавить в&nbsp;Google Календарь ссылкой под ней.</p>
+      <div class="calbtns">
+        <a class="calbtn" href="raspisanie-2potok-utro.ics" download>Скачать: практики утром</a>
+        <a class="calbtn" href="raspisanie-2potok-vecher.ics" download>Скачать: практики вечером</a>
       </div>
     </div>
 
@@ -185,7 +207,7 @@
         </div>
         <div class="row">
           <div class="date"><div class="num">10</div><span class="label">ноября <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Практика 1</h2><p>Утренняя группа&nbsp;– 9:00 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Практика 1</h2><p>Утренняя группа&nbsp;– 9:00–10:30 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p></div>
         </div>
       </div>
 
@@ -194,11 +216,11 @@
         <h2>Постановка целей и выход за пределы привычного</h2>
         <div class="row">
           <div class="date"><div class="num">17</div><span class="label">ноября <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Лекция 2</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Лекция 2</h2><p>18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F+2+%C2%B7+%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0+%D1%86%D0%B5%D0%BB%D0%B5%D0%B9+%D0%B8+%D0%B2%D1%8B%D1%85%D0%BE%D0%B4+%D0%B7%D0%B0+%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D1%8B+%D0%BF%D1%80%D0%B8%D0%B2%D1%8B%D1%87%D0%BD%D0%BE%D0%B3%D0%BE&amp;dates=20261117T150000Z%2F20261117T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ в&nbsp;Google Календарь</a></div></div>
         </div>
         <div class="row">
           <div class="date"><div class="num">24</div><span class="label">ноября <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Практика 2</h2><p>Утренняя группа&nbsp;– 9:00 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Практика 2</h2><p>Утренняя группа&nbsp;– 9:00–10:30 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+2+%C2%B7+%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20261124T060000Z%2F20261124T073000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ утро в&nbsp;Google</a><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+2+%C2%B7+%D0%B2%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20261124T150000Z%2F20261124T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ вечер в&nbsp;Google</a></div></div>
         </div>
       </div>
 
@@ -207,11 +229,11 @@
         <h2>Биология решений и формула НИИ</h2>
         <div class="row">
           <div class="date"><div class="num">1</div><span class="label">декабря <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Лекция 3</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Лекция 3</h2><p>18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F+3+%C2%B7+%D0%91%D0%B8%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F+%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9+%D0%B8+%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0+%D0%9D%D0%98%D0%98&amp;dates=20261201T150000Z%2F20261201T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ в&nbsp;Google Календарь</a></div></div>
         </div>
         <div class="row">
           <div class="date"><div class="num">8</div><span class="label">декабря <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Практика 3</h2><p>Утренняя группа&nbsp;– 9:00 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Практика 3</h2><p>Утренняя группа&nbsp;– 9:00–10:30 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+3+%C2%B7+%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20261208T060000Z%2F20261208T073000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ утро в&nbsp;Google</a><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+3+%C2%B7+%D0%B2%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20261208T150000Z%2F20261208T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ вечер в&nbsp;Google</a></div></div>
         </div>
       </div>
 
@@ -220,11 +242,11 @@
         <h2>Психическая устойчивость</h2>
         <div class="row">
           <div class="date"><div class="num">15</div><span class="label">декабря <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Лекция 4</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Лекция 4</h2><p>18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F+4+%C2%B7+%D0%9F%D1%81%D0%B8%D1%85%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%8C&amp;dates=20261215T150000Z%2F20261215T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ в&nbsp;Google Календарь</a></div></div>
         </div>
         <div class="row">
           <div class="date"><div class="num">22</div><span class="label">декабря <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Практика 4</h2><p>Утренняя группа&nbsp;– 9:00 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Практика 4</h2><p>Утренняя группа&nbsp;– 9:00–10:30 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+4+%C2%B7+%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20261222T060000Z%2F20261222T073000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ утро в&nbsp;Google</a><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+4+%C2%B7+%D0%B2%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20261222T150000Z%2F20261222T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ вечер в&nbsp;Google</a></div></div>
         </div>
       </div>
 
@@ -233,11 +255,11 @@
         <h2>Зеркальное лидерство</h2>
         <div class="row">
           <div class="date"><div class="num">29</div><span class="label">декабря <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Лекция 5</h2><p>18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Лекция 5</h2><p>18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F+5+%C2%B7+%D0%97%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5+%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE&amp;dates=20261229T150000Z%2F20261229T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ в&nbsp;Google Календарь</a></div></div>
         </div>
         <div class="row">
           <div class="date"><div class="num">5</div><span class="label">января <span class="wd">вторник</span></span></div>
-          <div class="what"><h2>Практика 5</h2><p>Утренняя группа&nbsp;– 9:00 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p></div>
+          <div class="what"><h2>Практика 5</h2><p>Утренняя группа&nbsp;– 9:00–10:30 по&nbsp;Москве</p><p>Вечерняя группа&nbsp;– 18:00–19:30 по&nbsp;Москве</p><div class="cals"><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+5+%C2%B7+%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20270105T060000Z%2F20270105T073000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ утро в&nbsp;Google</a><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0+5+%C2%B7+%D0%B2%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D1%8F%D1%8F+%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0&amp;dates=20270105T150000Z%2F20270105T163000Z&amp;details=%D0%9D%D0%98%D0%98%3A+%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA+%C2%B7+2+%D0%BF%D0%BE%D1%82%D0%BE%D0%BA.+%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%B2%D1%85%D0%BE%D0%B4+%D0%BF%D1%80%D0%B8%D0%B4%D1%91%D1%82+%D0%B2+%D1%87%D0%B0%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%B0.+%D0%A0%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%3A+https%3A%2F%2Fniipraktik.github.io%2Fpredobuchenie%2Fraspisanie.html&amp;ctz=Europe%2FMoscow" target="_blank" rel="noopener">+ вечер в&nbsp;Google</a></div></div>
         </div>
       </div>
     </div>
