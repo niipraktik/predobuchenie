@@ -1,0 +1,144 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NII Praktik//2 potok//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:НИИ: Практик · 2 поток
+X-WR-TIMEZONE:Europe/Moscow
+BEGIN:VEVENT
+UID:nii2-20261117T150000Z-0@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261117T150000Z
+DTEND:20261117T163000Z
+SUMMARY:НИИ: Практик · Лекция 2 · Постановка 
+ целей и выход за пределы привычного
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Лекция 2 · Постанов
+ ка целей и выход за пределы привычного
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20261124T060000Z-1@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261124T060000Z
+DTEND:20261124T073000Z
+SUMMARY:НИИ: Практик · Практика 2 · утренняя 
+ группа
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Практика 2 · утренн
+ яя группа
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20261201T150000Z-2@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261201T150000Z
+DTEND:20261201T163000Z
+SUMMARY:НИИ: Практик · Лекция 3 · Биология ре
+ шений и формула НИИ
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Лекция 3 · Биология 
+ решений и формула НИИ
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20261208T060000Z-3@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261208T060000Z
+DTEND:20261208T073000Z
+SUMMARY:НИИ: Практик · Практика 3 · утренняя 
+ группа
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Практика 3 · утренн
+ яя группа
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20261215T150000Z-4@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261215T150000Z
+DTEND:20261215T163000Z
+SUMMARY:НИИ: Практик · Лекция 4 · Психическа
+ я устойчивость
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Лекция 4 · Психичес
+ кая устойчивость
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20261222T060000Z-5@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261222T060000Z
+DTEND:20261222T073000Z
+SUMMARY:НИИ: Практик · Практика 4 · утренняя 
+ группа
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Практика 4 · утренн
+ яя группа
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20261229T150000Z-6@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20261229T150000Z
+DTEND:20261229T163000Z
+SUMMARY:НИИ: Практик · Лекция 5 · Зеркальное 
+ лидерство
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Лекция 5 · Зеркальн
+ ое лидерство
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nii2-20270105T060000Z-7@niipraktik.github.io
+DTSTAMP:20261117T090000Z
+DTSTART:20270105T060000Z
+DTEND:20270105T073000Z
+SUMMARY:НИИ: Практик · Практика 5 · утренняя 
+ группа
+DESCRIPTION:НИИ: Практик · 2 поток. Ссылка на в
+ ход придёт в чат курса. Расписание: https://n
+ iipraktik.github.io/predobuchenie/raspisanie.html
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:НИИ: Практик · Практика 5 · утренн
+ яя группа
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
