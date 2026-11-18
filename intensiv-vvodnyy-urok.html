@@ -374,6 +374,19 @@
   .formula .muted{font-size:13.5px}
   .endbtns{display:flex;gap:10px;margin:22px 0 8px;flex-wrap:wrap}
   .endbtns .copy2{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+
+  .gets{background:var(--navy);border-radius:10px;padding:20px 26px;margin:22px 0 0}
+  .gets-h{font-family:'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:12px;font-weight:700;color:#D9C48F;margin-bottom:10px}
+  .gets ol{margin:0;padding-left:22px;color:#fff}
+  .gets li{font-family:'Helvetica Neue',Arial,sans-serif;font-size:14.5px;line-height:1.55;margin-bottom:8px;color:#fff}
+  .gets li b{color:#F0DFB8}
+  .tracker{border:1.5px solid var(--soft);border-radius:10px;overflow:hidden;margin:14px 0 22px}
+  .tr-row{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;border-top:1px solid var(--soft)}
+  .tr-row:first-child{border-top:none}
+  .tr-row span,.tr-row label{padding:10px 14px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;color:var(--navy);text-align:center}
+  .tr-row span:first-child{text-align:left;font-weight:700}
+  .tr-head{background:#FBF7EF}.tr-head span{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-deep);font-weight:700}
+  .tr-row label{cursor:pointer}.tr-row input{width:20px;height:20px;accent-color:var(--navy)}
   .slide{min-height:0}
   @media (max-width:700px){
     .bar{padding:10px 12px;flex-wrap:wrap}
@@ -421,6 +434,17 @@
       <div class="subtitle">И что с этим делать – ещё до первого эфира</div>
       <p class="lede">У каждого из нас есть отложенное решение. Мечта, цель, важный разговор, проект – мы возвращаемся к ним снова и снова, обещаем себе «вот с понедельника», а шаг так и не делаем. Почему так происходит, объясняет нейрофизиология, и в этом уроке мы начнём разбираться вместе. За 20–25 минут вы найдёте своё отложенное решение, увидите, какая реакция мозга держит вас на месте, и попробуете два простых инструмента. 15 декабря вы придёте на первый эфир уже со своей задачей – и мы сразу возьмём её в работу.</p>
 
+      <div class="gets">
+        <div class="gets-h">Что вы заберёте из урока уже сегодня</div>
+        <ol>
+          <li><b>Формулу «Я принял решение».</b> Переформулируете своё отложенное решение так, чтобы мозг начал искать путь, и наметите первый шаг на сегодня.</li>
+          <li><b>Сенсорный перехват.</b> Скорая помощь на минуту, когда «понесло» и голова уже не думает.</li>
+          <li><b>Дыхание «4–8».</b> Три цикла – и возбуждение нервной системы спадает.</li>
+          <li><b>Утреннюю гигиену принятия решений.</b> Практика на 4 минуты, с которой начинают день студенты курса «Практик».</li>
+          <li><b>Вопрос-фильтр.</b> Один вопрос, который помогает перед любым делом понять, ведёт оно к цели или уводит от неё.</li>
+        </ol>
+      </div>
+
       <div class="howto">
         <div class="ht-h">Как проходить урок</div>
         <p>Отмечайте пункты и пишите ответы прямо здесь – они сохраняются в этом браузере. В конце нажмите «Скопировать ответы для чата» или «Сохранить PDF». Отложенное решение перенесите в <b>дневник принятия решений</b> – кнопка для скачивания есть в уроке на платформе. Дневник понадобится на каждом эфире: в нём вы будете отмечать, что происходит с вашим решением день за днём.</p>
@@ -431,8 +455,8 @@
         <div class="row"><span class="dot">2</span><div><div class="toc-label">Часть 2</div><b>Почему мы понимаем, но не делаем</b></div></div>
         <div class="row"><span class="dot">3</span><div><div class="toc-label">Часть 3</div><b>Интуиция или нейроинтуиция: кто принимает решение</b></div></div>
         <div class="row"><span class="dot">4</span><div><div class="toc-label">Часть 4</div><b>«Я хочу» и «Я принял решение»: как мозг слышит цель</b></div></div>
-        <div class="row"><span class="dot">5</span><div><div class="toc-label">Часть 5</div><b>Сначала успокоить нервную систему: два инструмента</b></div></div>
-        <div class="row"><span class="dot">6</span><div><div class="toc-label">Часть 6</div><b>Что будет на эфирах и что сделать до 15 декабря</b></div></div>
+        <div class="row"><span class="dot">5</span><div><div class="toc-label">Часть 5</div><b>Практики, которые работают уже сегодня</b></div></div>
+        <div class="row"><span class="dot">6</span><div><div class="toc-label">Часть 6</div><b>Ваши 7 дней до эфира и что будет на интенсиве</b></div></div>
       </div>
     </div>
 
@@ -660,11 +684,21 @@
         <label for="q_body">Что меняется в теле, когда «хочу» превращается в «решил»?</label>
         <textarea id="q_body" data-save rows="2" placeholder="Например: выпрямилась спина, стало страшнее, но яснее"></textarea>
       </div>
+
+      <h2>Первый шаг – сегодня</h2>
+      <p>Решение становится решением, когда за ним идёт действие. Пусть шаг будет совсем маленьким: написать одно сообщение, открыть документ, узнать одну цену, назначить дату разговора. Как говорит Дмитрий Рустамович, сначала шаг, потом всё остальное.</p>
+      <div class="field">
+        <label for="q_step">Мой шаг по решению – сегодня</label>
+        <textarea id="q_step" data-save rows="2" placeholder="Например: написать двум коллегам и спросить, интересна ли им группа"></textarea>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" data-save id="step_done"> Сделано! Заметьте, что изменилось внутри после этого шага</label>
+      </div>
     </div>
 
     <!-- PART 5 -->
     <div class="slide" id="ch5">
-      <div class="part"><span class="dot">5</span><span class="label">Сначала успокоить нервную систему</span></div>
+      <div class="part"><span class="dot">5</span><span class="label">Практики, которые работают уже сегодня</span></div>
 
       <p>Но есть важное условие. Поставить доминанту на задачу не получится, когда вы на взводе. Перегруженный мозг достраивает угрозы, усиливает тревогу, теряет точность и застревает в анализе – в таком состоянии решать рано.</p>
 
@@ -673,7 +707,7 @@
         <p><b>Сначала – успокоить нервную систему. И только потом – принимать решение.</b></p>
       </div>
 
-      <p>Два простых инструмента возвращают ясность примерно за минуту. Сделайте их прямо сейчас, а потом ещё раз посмотрите на своё отложенное решение.</p>
+      <p>Вот четыре инструмента, которыми можно пользоваться с сегодняшнего дня. Первые два возвращают ясность примерно за минуту – сделайте их прямо сейчас, а потом ещё раз посмотрите на своё отложенное решение.</p>
 
       <div class="tool">
         <div class="tool-h"><span>Инструмент 1</span>Сенсорный перехват</div>
@@ -702,15 +736,43 @@
         <textarea id="q_state" data-save rows="3" placeholder="Ваши наблюдения"></textarea>
       </div>
 
+      <div class="tool">
+        <div class="tool-h"><span>Инструмент 3</span>Утренняя гигиена принятия решений – 4 минуты</div>
+        <p>Мы чистим зубы каждый день, чтобы они не болели. А принятием решений пользуемся так же постоянно – и почти никогда не наводим в нём порядок. Утром мы часто просыпаемся уже «прогруженными»: какой-то орган чувств с вечера отфильтрован, и мы весь день видим и слышим выборочно. Эта практика перезапускает их каждое утро. Сделайте её сразу после сна, выпив воды.</p>
+        <div class="checks">
+          <label><input type="checkbox" data-save id="m1"> <b>Слух – 1 минута.</b> Прикройте глаза: 3 ближних звука, 3 дальних, и так по кругу. Только звук – без объяснения, кто или что его издаёт.</label>
+          <label><input type="checkbox" data-save id="m2"> <b>Зрение – 1 минута.</b> 3 предмета или 3 цвета, переводите взгляд с одного на другой. Придут мысли – спокойно возвращайтесь: «смотри».</label>
+          <label><input type="checkbox" data-save id="m3"> <b>Тело.</b> Поймайте 3 физических ощущения: рука, стопы, что-то в голове. Вы удивитесь, сколько всего идёт одновременно.</label>
+          <label><input type="checkbox" data-save id="m4"> <b>Дыхание «4–8».</b> 3 цикла, как выше.</label>
+          <label><input type="checkbox" data-save id="m5"> <b>Активация.</b> Встаньте устойчиво, почувствуйте стопы, выпрямитесь, как будто на макушке стоит стакан воды. Держите в голове задачу на сегодня и минуту медленно походите по комнате.</label>
+        </div>
+        <p class="muted">Последний шаг учит нервную систему простой связке: есть задача – включается тонус тела. Решение переходит из мысли в тело, а из тела в действие. Слышу – вижу – чувствую – действую.</p>
+      </div>
+
+      <div class="tool">
+        <div class="tool-h"><span>Инструмент 4</span>Вопрос-фильтр</div>
+        <p>Студенты курса «Практик» писали себе этот вопрос прямо на руке, как подсказку в детстве. Задавайте его перед любым делом в течение дня:</p>
+        <div class="quote">Какую задачу я сейчас решаю? Это действие приближает меня к ней или отвлекает?</div>
+        <p>Пара дней с этим вопросом – и вы заметите, сколько времени уходит на дела, которые к вашему решению отношения не имеют.</p>
+      </div>
+
       <p class="muted">Поставить доминанту – полдела. Труднее удержать её, когда гарантий нет. Как удерживать движение к цели день за днём, разберём на эфирах.</p>
     </div>
 
     <!-- PART 6 -->
     <div class="slide" id="ch6">
-      <div class="part"><span class="dot">6</span><span class="label">Что будет на эфирах</span></div>
+      <div class="part"><span class="dot">6</span><span class="label">Ваши 7 дней до эфира</span></div>
 
       <p>Теперь вы знаете, что держит ваше решение на месте: реакция выживания, «хочу» вместо «решил», перегруженная нервная система. Дальше начинается самое интересное. Навык принимать решения выстраивается в практике, шаг за шагом, и лучше всего это получается вживую: с практиками прямо на эфире и обратной связью от Дмитрия Рустамовича и Изабеллы. Как говорит Дмитрий Рустамович, сначала шаг, потом всё остальное.</p>
 
+      <h2>Отмечайте каждый день</h2>
+      <p>Неделя до эфира – хорошее время, чтобы проверить инструменты на себе. Отмечайте, что сделали. К 15 декабря у вас уже будет свой опыт и наблюдения, и на эфире вам будет с чем работать.</p>
+      <div class="tracker">
+        <div class="tr-row tr-head"><span></span><span>Утренняя гигиена</span><span>Шаг по решению</span></div>
+        <div class="tr-row"><span>День 1</span><label><input type="checkbox" data-save id="t1a"></label><label><input type="checkbox" data-save id="t1b"></label></div><div class="tr-row"><span>День 2</span><label><input type="checkbox" data-save id="t2a"></label><label><input type="checkbox" data-save id="t2b"></label></div><div class="tr-row"><span>День 3</span><label><input type="checkbox" data-save id="t3a"></label><label><input type="checkbox" data-save id="t3b"></label></div><div class="tr-row"><span>День 4</span><label><input type="checkbox" data-save id="t4a"></label><label><input type="checkbox" data-save id="t4b"></label></div><div class="tr-row"><span>День 5</span><label><input type="checkbox" data-save id="t5a"></label><label><input type="checkbox" data-save id="t5b"></label></div><div class="tr-row"><span>День 6</span><label><input type="checkbox" data-save id="t6a"></label><label><input type="checkbox" data-save id="t6b"></label></div><div class="tr-row"><span>День 7</span><label><input type="checkbox" data-save id="t7a"></label><label><input type="checkbox" data-save id="t7b"></label></div>
+      </div>
+
+      <h2>Что будет на интенсиве</h2>
       <div class="days">
         <div class="day"><div class="d-date">15 декабря · 18:00 мск</div><div class="d-t">Эфир 1. Почему вы всё ещё на месте</div><p>Диагностика вашего типа принятия решений. Интуиция и нейроинтуиция: почему замирание или хаотичное движение – это нормально и как принимать решения иначе.</p></div>
         <div class="day"><div class="d-date">16 декабря · 18:00 мск</div><div class="d-t">Эфир 2. Нейробиология успеха</div><p>Как успешные люди формулируют решения, исследования А. А. Ухтомского. Сформулируете своё решение через технику утвердительного мышления.</p></div>
@@ -725,9 +787,9 @@
         <div class="ta-h">Что сделать до 15 декабря</div>
         <ul>
           <li>Запишите отложенное решение в дневник принятия решений – с ним вы придёте на первый эфир.</li>
-          <li>Возьмите очень простые цели: переформулируйте ещё два своих «хочу» в «я принял решение» и сделайте одно маленькое действие по любому из них.</li>
-          <li>Перед делом спрашивайте себя: какую задачу я сейчас решаю? Это действие приближает меня к ней или отвлекает? Студенты курса писали себе этот вопрос прямо на руке.</li>
-          <li>Каждый день перед важным выбором – сенсорный перехват или дыхание «4–8».</li>
+          <li>Каждое утро – гигиена принятия решений, 4 минуты. В течение дня – вопрос-фильтр.</li>
+          <li>Возьмите очень простые цели: переформулируйте ещё два своих «хочу» в «я принял решение» и сделайте по одному маленькому шагу.</li>
+          <li>Когда накрывает перед важным выбором – сенсорный перехват или дыхание «4–8».</li>
           <li>Нажмите «Скопировать ответы для чата» и поделитесь в чате участников: какое решение вы принесёте на интенсив.</li>
         </ul>
       </div>
@@ -799,6 +861,8 @@
     if(store.reaction) L.push('Моя реакция в стрессе: '+names[store.reaction]);
     if(txt('q_decided')) L.push('Моё решение: '+txt('q_decided'));
     if(txt('q_body')) L.push('Что изменилось в теле: '+txt('q_body'));
+    if(txt('q_step')) L.push('Мой первый шаг: '+txt('q_step')+(store.step_done?' – сделано':''));
+    var days=0; for(var i=1;i<=7;i++){ if(store['t'+i+'a']) days++; } if(days) L.push('Утренняя практика: '+days+' из 7 дней');
     if(txt('q_state')) L.push('После инструментов: '+txt('q_state'));
     var s=L.join('\n'); var note=document.getElementById('copyNote');
     function ok(){note.textContent='Скопировано – вставьте в чат участников.'}
